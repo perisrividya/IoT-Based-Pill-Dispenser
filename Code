@@ -14,10 +14,10 @@
 #include "SoftwareSerial.h"
 #include "DFRobotDFPlayerMini.h"
 
-#define WIFI_SSID "****************"
-#define WIFI_PASSWORD "****************"
-#define API_KEY "****************e"
-#define DATABASE_URL "****************" //<databaseName>.firebaseio.com or <databaseName>.<region>.firebasedatabase.app
+#define WIFI_SSID "Srividya's Redmi"
+#define WIFI_PASSWORD "srividya9"
+#define API_KEY "AIzaSyDx-ABCDefGh1234567xyz890lmNOPQe"
+#define DATABASE_URL "https://console.firebase.google.com/project/esp8266-fb-9df1f/database/esp8266-fb-9df1f-default-rtdb/data/~2F" //<databaseName>.firebaseio.com or <databaseName>.<region>.firebasedatabase.app
 
 #define MD1 D3 
 #define MD2 D4 
@@ -415,4 +415,13 @@ void lastKaj1()
   Serial.println();
   Serial.println("F-------------");
   lm=millis();
+}void setup() {
+  // put your setup code here, to run once:
+
 }
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}
+
