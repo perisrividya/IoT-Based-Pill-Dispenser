@@ -1,0 +1,55 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+    
+    "Devices": {
+      "$device_id": {
+        ".read": "auth.uid == $device_id",
+        ".write": "auth.uid == $device_id",
+
+        "MedicineSlots": {
+          "MS1": {
+            ".validate": "newData.isString() && newData.val().length <= 20"
+          },
+          "MS2": {
+            ".validate": "newData.isString() && newData.val().length <= 20"
+          },
+          "MS3": {
+            ".validate": "newData.isString() && newData.val().length <= 20"
+          }
+        },
+
+        "Alarms": {
+          "AH1": {
+            ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() < 24"
+          },
+          "AM1": {
+            ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() < 60"
+          },
+          "AH2": {
+            ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() < 24"
+          },
+          "AM2": {
+            ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() < 60"
+          },
+          "AH3": {
+            ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() < 24"
+          },
+          "AM3": {
+            ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() < 60"
+          }
+        },
+
+        "Config": {
+          "Repeat": {
+            ".validate": "newData.isBoolean()"
+          },
+          "Volume": {
+            ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 30"
+          }
+        }
+      }
+    }
+  }
+}
